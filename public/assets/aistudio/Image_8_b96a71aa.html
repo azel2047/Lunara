@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#ffffff", "border-pink": "#FBD3DF", "surface": "#fcf8ff", "on-primary-fixed-variant": "#8a1240", "surface-variant": "#e4e1ed", "on-tertiary-fixed-variant": "#6b3a17", "secondary-fixed-dim": "#c9beff", "on-secondary-container": "#3c2a89", "secondary": "#6050af", "on-primary-container": "#5f0028", "primary-container": "#f0648c", "surface-bright": "#fcf8ff", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#feb789", "canvas-off-white": "#FFFAFC", "on-primary-fixed": "#3f0018", "primary": "#aa2e57", "outline": "#8a7175", "phase-period": "#F0648C", "pink-tint": "#FFE4EC", "surface-tint": "#aa2e57", "status-error": "#C0392B", "on-secondary-fixed-variant": "#483795", "error-container": "#ffdad6", "primary-fixed-dim": "#ffb1c2", "on-tertiary-fixed": "#311300", "on-surface-variant": "#574145", "pink-primary-strong": "#D2386A", "on-error": "#ffffff", "inverse-primary": "#ffb1c2", "background": "#fcf8ff", "on-secondary-fixed": "#1b0062", "outline-variant": "#ddbfc4", "on-surface": "#1b1b24", "tertiary-container": "#c5865c", "peach-subtle": "#FFEBDD", "pink-wash": "#FFF1F5", "surface-container-high": "#e9e6f3", "primary-fixed": "#ffd9df", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "inverse-surface": "#303039", "secondary-container": "#a898fd", "tertiary": "#87512c", "status-success": "#2E9E6B", "surface-container-low": "#f5f2ff", "surface-dim": "#dbd8e5", "ink-muted": "#6E6E7A", "on-background": "#1b1b24", "status-warning": "#B7791F", "surface-container-highest": "#e4e1ed", "on-tertiary-container": "#4b2201", "pink-subtle": "#FFD6E2", "inverse-on-surface": "#f2effc", "phase-fertile": "#9C8CF0", "on-secondary": "#ffffff", "pink-primary-text": "#C92A5E", "phase-pms": "#FFB88A", "on-primary": "#ffffff", "error": "#ba1a1a", "tertiary-fixed": "#ffdcc7", "surface-container": "#efecf9", "lavender-subtle": "#E9E5FD" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "gutter": "1rem", "space-xl": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "1.25rem" }, "fontFamily": { "display": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-xs": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "display": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "21px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-xs": ["11px", {"lineHeight": "14px", "fontWeight": "600"}], "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-canvas-off-white text-on-surface font-body-md min-h-screen flex flex-col relative selection:bg-pink-subtle selection:text-pink-primary-strong"><div class="fixed top-0 inset-x-0 h-72 bg-gradient-to-b from-pink-tint/80 via-pink-wash/50 to-transparent pointer-events-none z-0"></div><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-canvas-off-white/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(240,100,140,0.06)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-pink-subtle flex items-center justify-center text-pink-primary-strong shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]"><span class="material-symbols-outlined text-[20px]">water_drop</span></div><div class="flex flex-col"><span class="font-label-xs text-ink-muted leading-tight tracking-wider uppercase">Lunara Care</span><span class="font-headline-sm text-pink-primary-strong leading-tight">Kalender</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Privasi Cepat" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-pink-primary-strong transition-transform active:scale-95"><span class="material-symbols-outlined text-[22px]">shield</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(240,100,140,0.2)] ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7SN0UEcT1MKkh3JaGhlE83eiDLiiwLty86FBLz__2dHFh4GJY1VWm3v_2uCmvDFF_uPVB_-PHqaGikmmGjQn2z8LGN9sqq7VFi1XkTH2Lpsa9xOxnWX80r9obprnLXlHgCHqyoaZt9NFMkKcStbWtpH3S_12tm6IdrYq8LduTbVkdJA_jDeffBDeqrouMrdaLTFwZncoEKCM1RNCublR_-iN7y-qQr-C0_xUFHNncaSrQWNHk2JFQ"/></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-16 pb-28 bg-transparent z-10"><div class="flex flex-col w-full pb-6 space-y-5">
+<!-- Subheader & Quick Filter -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-xs text-ink-muted uppercase tracking-wider">Laporan Personal</span>
+<h1 class="font-headline-lg text-on-surface">Wawasan &amp; Tren</h1>
+</div>
+<button aria-label="Bagikan Wawasan" class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-[0_4px_16px_rgba(240,100,140,0.12)] flex items-center justify-center text-pink-primary-strong active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+<!-- Time Window Tabs (Clay Pill Style) -->
+<div class="flex items-center gap-2 p-1 bg-surface-container-low rounded-full">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-pink-primary-strong text-on-primary font-label-sm shadow-[0_2px_8px_rgba(210,56,106,0.3)] transition-all">
+        Bulan Ini (Okt)
+      </button>
+<button class="flex-1 py-1.5 px-3 rounded-full text-ink-muted font-label-sm hover:text-on-surface transition-all">
+        3 Bulan
+      </button>
+<button class="flex-1 py-1.5 px-3 rounded-full text-ink-muted font-label-sm hover:text-on-surface transition-all">
+        6 Bulan
+      </button>
+</div>
+<!-- Friendly Status Banner -->
+<div class="bg-gradient-to-r from-pink-wash via-pink-tint to-peach-subtle p-3.5 rounded-lg flex items-center justify-between shadow-[0_4px_16px_rgba(240,100,140,0.08)]">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-pink-primary-strong shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-pink-primary-strong">Siklusmu Sehat &amp; Teratur</span>
+<span class="font-body-sm text-ink-muted">Rata-rata 28 hari • Variasi ±1 hari</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 text-pink-primary-strong font-label-xs shadow-sm">Normal</span>
+</div>
+</div>
+<!-- Hormone Fluctuation Curve Card -->
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-[0_8px_24px_rgba(240,100,140,0.15)] relative overflow-hidden">
+<!-- Top-edge glossy specular reflection -->
+<div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-b from-white to-transparent opacity-90 pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<div>
+<h2 class="font-headline-sm text-on-surface">Pola &amp; Fluktuasi Hormon</h2>
+<p class="font-body-sm text-ink-muted">Dinamika biokimia alami tubuhmu</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-lavender-subtle text-secondary font-label-xs">Estimasi Edukatif</span>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-3 py-2 flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-phase-period"></span>
+<span class="font-label-xs text-on-surface-variant">Estrogen</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-phase-fertile"></span>
+<span class="font-label-xs text-on-surface-variant">Progesteron</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-phase-pms"></span>
+<span class="font-label-xs text-on-surface-variant">LH (Lonjakan)</span>
+</div>
+</div>
+<!-- Hormone Wave SVG Chart -->
+<div class="relative w-full h-44 my-2">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Soft Phase Background Gradients -->
+<lineargradient id="activeOvulationGlow" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#9C8CF0" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#9C8CF0" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="estrogenFill" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F0648C" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#F0648C" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Ovulation Active Highlight Band (Days 12-16) -->
+<rect fill="url(#activeOvulationGlow)" height="135" rx="12" width="55" x="135" y="6"></rect>
+<!-- Grid Guidelines (Subtle) -->
+<line stroke="#efecf9" stroke-dasharray="3 3" stroke-width="1" x1="10" x2="330" y1="35" y2="35"></line>
+<line stroke="#efecf9" stroke-dasharray="3 3" stroke-width="1" x1="10" x2="330" y1="80" y2="80"></line>
+<line stroke="#efecf9" stroke-dasharray="3 3" stroke-width="1" x1="10" x2="330" y1="125" y2="125"></line>
+<!-- Estrogen Wave (Pink #F0648C) -->
+<path d="M 10 120 C 50 120, 80 110, 115 70 C 145 25, 160 22, 175 75 C 195 125, 230 65, 270 70 C 300 75, 320 120, 330 125 L 330 140 L 10 140 Z" fill="url(#estrogenFill)"></path>
+<path d="M 10 120 C 50 120, 80 110, 115 70 C 145 25, 160 22, 175 75 C 195 125, 230 65, 270 70 C 300 75, 320 120, 330 125" stroke="#F0648C" stroke-linecap="round" stroke-width="3"></path>
+<!-- Progesterone Wave (Lavender #9C8CF0) -->
+<path d="M 10 128 C 70 128, 140 128, 170 122 C 200 115, 225 45, 260 45 C 290 45, 315 95, 330 125" stroke="#9C8CF0" stroke-dasharray="4 1" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- LH Surge Wave (Peach #FFB88A) -->
+<path d="M 10 132 C 100 132, 135 132, 150 70 C 158 20, 166 20, 174 85 C 185 132, 280 132, 330 132" stroke="#FFB88A" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Day 14 Interactive/Active Marker (Vertical indicator + Dot) -->
+<line stroke="#D2386A" stroke-dasharray="2 2" stroke-width="1.5" x1="160" x2="160" y1="10" y2="140"></line>
+<!-- Glowing Current Day Dot -->
+<circle cx="160" cy="24" fill="#FFD6E2" opacity="0.6" r="8"></circle>
+<circle cx="160" cy="24" fill="#D2386A" r="5"></circle>
+<circle cx="160" cy="24" fill="#FFFFFF" r="2"></circle>
+<!-- Today Tag -->
+<g transform="translate(112, 0)">
+<rect fill="#D2386A" height="20" rx="10" width="96"></rect>
+<text fill="#FFFFFF" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" text-anchor="middle" x="48" y="14">Hari Ini: Hari 14</text>
+</g>
+</svg>
+</div>
+<!-- 4 Cycle Phases Breakdown Grid -->
+<div class="grid grid-cols-4 gap-1.5 pt-1">
+<div class="flex flex-col items-center p-2 rounded-lg bg-pink-wash text-center">
+<span class="font-label-xs text-pink-primary-strong">Haid</span>
+<span class="font-body-sm text-ink-muted text-[10px]">H 1-5</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded-lg bg-pink-wash text-center">
+<span class="font-label-xs text-on-surface-variant">Folikuler</span>
+<span class="font-body-sm text-ink-muted text-[10px]">H 6-11</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded-lg bg-lavender-subtle text-center ring-2 ring-secondary/30 shadow-sm scale-105">
+<span class="font-label-xs text-secondary font-bold flex items-center gap-0.5">
+          Ovulasi
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</span>
+<span class="font-body-sm text-secondary text-[10px] font-semibold">H 12-16</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded-lg bg-peach-subtle text-center">
+<span class="font-label-xs text-tertiary">Luteal</span>
+<span class="font-body-sm text-ink-muted text-[10px]">H 17-28</span>
+</div>
+</div>
+</div>
+<!-- What's Happening in Your Body Card -->
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-[0_8px_24px_rgba(240,100,140,0.12)] relative">
+<div class="flex items-start gap-3.5 mb-4">
+<div class="w-11 h-11 rounded-full bg-pink-subtle flex items-center justify-center text-pink-primary-strong shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-pink-primary-text uppercase tracking-wide">Analisis Biologis Hari Ini</span>
+<h3 class="font-headline-sm text-on-surface">Apa yang Terjadi di Tubuhmu?</h3>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-4 leading-relaxed">
+<span class="text-pink-primary-strong font-semibold">Estrogen berada di tingkat tertinggi!</span> Kamu mungkin merasa jauh lebih berenergi, kulit tampak berkilau sehat, serta suasana hati yang lebih optimis dan komunikatif.
+    </p>
+<!-- 3 Mini Hormone/Energy Indicators -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<div class="bg-pink-wash p-3 rounded-lg flex flex-col gap-1 items-center text-center">
+<span class="font-label-xs text-ink-muted">Estrogen</span>
+<div class="flex text-pink-primary-strong text-xs font-bold gap-0.5">
+<span>★★★★</span><span class="text-pink-subtle">★</span>
+</div>
+<span class="font-label-xs text-pink-primary-strong bg-surface-container-lowest px-2 py-0.5 rounded-full shadow-xs">Puncak</span>
+</div>
+<div class="bg-lavender-subtle p-3 rounded-lg flex flex-col gap-1 items-center text-center">
+<span class="font-label-xs text-ink-muted">Progesteron</span>
+<div class="flex text-secondary text-xs font-bold gap-0.5">
+<span>★★</span><span class="text-secondary-fixed">★★★</span>
+</div>
+<span class="font-label-xs text-secondary bg-surface-container-lowest px-2 py-0.5 rounded-full shadow-xs">Mulai Naik</span>
+</div>
+<div class="bg-peach-subtle p-3 rounded-lg flex flex-col gap-1 items-center text-center">
+<span class="font-label-xs text-ink-muted">Energi Tubuh</span>
+<span class="font-headline-sm text-tertiary">92%</span>
+<span class="font-label-xs text-tertiary bg-surface-container-lowest px-2 py-0.5 rounded-full shadow-xs">Optimal</span>
+</div>
+</div>
+</div>
+<!-- Symptoms & Mood Trends Card -->
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-[0_8px_24px_rgba(240,100,140,0.12)] space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-on-surface">Tren Gejala &amp; Suasana Hati</h3>
+<p class="font-body-sm text-ink-muted">Berdasarkan 24 catatan mandiri bulan ini</p>
+</div>
+<span class="material-symbols-outlined text-ink-muted text-[20px]">insights</span>
+</div>
+<!-- Frequent Symptoms Chips -->
+<div class="space-y-2">
+<span class="font-label-xs text-on-surface-variant uppercase tracking-wider block">Paling Sering Tercatat</span>
+<div class="flex flex-wrap gap-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-pink-wash text-pink-primary-strong">
+<span class="w-2 h-2 rounded-full bg-phase-period"></span>
+<span class="font-label-sm">Kram Ringan (3 hari di awal)</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-peach-subtle text-tertiary">
+<span class="w-2 h-2 rounded-full bg-phase-pms"></span>
+<span class="font-label-sm">Kembung (2 hari di fase luteal)</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-lavender-subtle text-secondary">
+<span class="w-2 h-2 rounded-full bg-phase-fertile"></span>
+<span class="font-label-sm">Mood Positif &amp; Fokus (7 hari berturut-turut)</span>
+</div>
+</div>
+</div>
+<!-- Sleep & Energy Correlation Chart -->
+<div class="pt-2">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-xs text-on-surface-variant uppercase tracking-wider">Durasi Tidur per Fase</span>
+<span class="font-label-xs text-pink-primary-strong">Rata-rata 7.2 Jam</span>
+</div>
+<!-- Mini 4-week bar comparison -->
+<div class="space-y-2.5">
+<div>
+<div class="flex justify-between text-xs font-label-xs mb-1">
+<span class="text-ink-muted">Fase Haid</span>
+<span class="text-on-surface font-semibold">7.1 Jam</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-pink-subtle rounded-full" style="width: 71%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-label-xs mb-1">
+<span class="text-ink-muted">Fase Folikuler (Tidur Nyenyak)</span>
+<span class="text-pink-primary-strong font-semibold">7.6 Jam</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-pink-primary-strong rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-label-xs mb-1">
+<span class="text-secondary font-semibold">Fase Ovulasi (Hari Ini)</span>
+<span class="text-secondary font-semibold">7.4 Jam</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-label-xs mb-1">
+<span class="text-ink-muted">Fase Luteal / PMS</span>
+<span class="text-tertiary font-semibold">6.8 Jam</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-phase-pms rounded-full" style="width: 66%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warm Personal Guidance & PDF Export -->
+<div class="bg-gradient-to-br from-pink-subtle/40 via-surface-container-lowest to-peach-subtle/50 rounded-lg p-5 shadow-[0_8px_24px_rgba(240,100,140,0.1)] relative">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-pink-primary-strong shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">local_cafe</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface">Pesan Sayang untuk Tubuhmu</h4>
+<span class="font-label-xs text-ink-muted">Tips disesuaikan dengan fase ovulasi</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-4 leading-relaxed">
+      Fase ovulasi adalah waktu emas untuk mengekspresikan ide kreatif, networking, dan olahraga dinamis. Berikan tubuhmu hidrasi minimal 2L dan camilan kaya magnesium (biji labu atau cokelat hitam murni) untuk menjaga ritme stamina tetap seimbang.
+    </p>
+<!-- PDF Consultation Download CTA -->
+<button class="w-full py-3.5 px-4 rounded-full bg-surface-container-lowest text-pink-primary-strong font-label-md flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(240,100,140,0.12)] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Unduh Laporan Siklus (PDF untuk Dokter)</span>
+</button>
+</div>
+</div>
+<script>
+  // Ensure the bottom navigation bar highlights 'Wawasan' as active
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav[data-active-classes] a');
+    navLinks.forEach(link => {
+      const isInsights = link.getAttribute('data-path') === 'wawasan';
+      if (isInsights) {
+        link.classList.remove('text-ink-muted');
+        link.classList.add('text-pink-primary-strong', 'font-label-md');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.style.fontVariationSettings = "'FILL' 1";
+        }
+      } else {
+        link.classList.remove('text-pink-primary-strong', 'font-label-md');
+        link.classList.add('text-ink-muted');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+        }
+      }
+    });
+  });
+</script></main><div class="fixed bottom-4 inset-x-0 z-50 px-margin flex justify-center pb-safe pointer-events-none"><nav class="pointer-events-auto w-full max-w-[358px] h-[72px] bg-surface-container-lowest/95 backdrop-blur-xl rounded-full px-space-xs py-space-xs flex items-center justify-around shadow-[0_4px_24px_rgba(240,100,140,0.18),inset_0_1px_1px_rgba(255,255,255,0.95)]" data-active-classes="text-pink-primary-strong font-label-md"><a class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 text-ink-muted transition-all active:scale-95" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-xs">Beranda</span></a><a class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 text-ink-muted transition-all active:scale-95" data-path="kalender" href="#"><span class="material-symbols-outlined text-[24px]">calendar_month</span><span class="font-label-xs">Kalender</span></a><a class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 text-ink-muted transition-all active:scale-95" data-path="wawasan" href="#"><span class="material-symbols-outlined text-[24px]">insights</span><span class="font-label-xs">Wawasan</span></a><a class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 text-ink-muted transition-all active:scale-95" data-path="profil" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-xs">Profil</span></a></nav></div></body></html>

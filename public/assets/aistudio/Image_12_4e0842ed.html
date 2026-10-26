@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "pink-wash": "#FFF1F5", "surface": "#fcf8ff", "phase-fertile": "#9C8CF0", "inverse-primary": "#ffb1c2", "peach-subtle": "#FFEBDD", "surface-container-low": "#f5f2ff", "status-warning": "#B7791F", "on-primary-fixed": "#3f0018", "ink-muted": "#6E6E7A", "primary-fixed-dim": "#ffb1c2", "surface-variant": "#e4e1ed", "secondary": "#6050af", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#8a1240", "secondary-container": "#a898fd", "status-error": "#C0392B", "on-tertiary-fixed": "#311300", "inverse-surface": "#303039", "on-tertiary-fixed-variant": "#6b3a17", "border-pink": "#FBD3DF", "lavender-subtle": "#E9E5FD", "on-error": "#ffffff", "tertiary": "#87512c", "pink-primary-strong": "#D2386A", "pink-tint": "#FFE4EC", "surface-container-highest": "#e4e1ed", "on-surface-variant": "#574145", "status-success": "#2E9E6B", "outline-variant": "#ddbfc4", "on-secondary-fixed": "#1b0062", "phase-period": "#F0648C", "phase-pms": "#FFB88A", "primary-container": "#f0648c", "surface-container": "#efecf9", "on-primary-container": "#5f0028", "primary-fixed": "#ffd9df", "tertiary-fixed": "#ffdcc7", "secondary-fixed-dim": "#c9beff", "secondary-fixed": "#e6deff", "on-primary": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "on-background": "#1b1b24", "on-secondary-container": "#3c2a89", "background": "#fcf8ff", "on-surface": "#1b1b24", "surface-container-high": "#e9e6f3", "on-secondary": "#ffffff", "pink-primary-text": "#C92A5E", "inverse-on-surface": "#f2effc", "tertiary-container": "#c5865c", "surface-tint": "#aa2e57", "canvas-off-white": "#FFFAFC", "pink-subtle": "#FFD6E2", "on-secondary-fixed-variant": "#483795", "primary": "#aa2e57", "surface-bright": "#fcf8ff", "tertiary-fixed-dim": "#feb789", "on-tertiary": "#ffffff", "on-tertiary-container": "#4b2201", "outline": "#8a7175", "surface-dim": "#dbd8e5" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "margin": "1.25rem", "gutter": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.5rem" }, fontFamily: { "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-xs": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }], "label-xs": ["11px", { lineHeight: "14px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-sm": ["16px", { lineHeight: "24px", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "500" }], "display": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-md": ["14px", { lineHeight: "20px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "21px", fontWeight: "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-pink-subtle selection:text-pink-primary-text"><main class="flex flex-col relative w-full min-h-screen bg-surface"><div class="flex flex-col w-full relative overflow-hidden select-none" id="exportModalRoot">
+<!-- Immersive Blurred Background Profile & Privacy Mock Screen -->
+<div class="w-full px-margin pt-4 pb-20 opacity-40 blur-sm pointer-events-none transition-all duration-300">
+<!-- Header of Background Screen -->
+<div class="flex items-center justify-between py-3 mb-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Privasi &amp; Keamanan</span>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface">help_outline</span>
+</div>
+</div>
+<!-- Mock Profile Tile -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex items-center gap-space-md mb-space-lg">
+<div class="w-14 h-14 rounded-full bg-pink-subtle flex items-center justify-center text-pink-primary-text font-headline-md">
+        N
+      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">Nadia Clarissa</span>
+<span class="font-body-sm text-body-sm text-ink-muted">Siklus #24 • Terlindungi Kriptografi</span>
+</div>
+</div>
+<!-- Mock Setting Items -->
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary">shield_lock</span>
+<span class="font-body-md text-body-md text-on-surface">Kunci Biometrik (Face ID)</span>
+</div>
+<div class="w-11 h-6 bg-primary rounded-full relative">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full absolute right-0.5 top-0.5"></div>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-pink-primary-strong">cloud_sync</span>
+<span class="font-body-md text-body-md text-on-surface">Penyimpanan Terenkripsi Lokal</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-success">Aktif</span>
+</div>
+</div>
+</div>
+<!-- Dimmed Modal Backdrop Overlay -->
+<div class="fixed inset-0 bg-[#22222B]/45 backdrop-blur-[3px] z-40 transition-opacity duration-300" id="backdropOverlay"></div>
+<!-- Bottom Sheet Modal Container -->
+<div class="fixed inset-x-0 bottom-0 z-50 flex flex-col justify-end max-w-[420px] mx-auto pointer-events-auto">
+<div class="w-full bg-surface-container-lowest rounded-t-[28px] shadow-[0_-8px_32px_rgba(240,100,140,0.20)] overflow-hidden flex flex-col max-h-[813px] transition-transform duration-300">
+<!-- Top Handle Pill -->
+<div class="pt-3 pb-2 flex justify-center items-center w-full bg-surface-container-lowest">
+<div class="w-12 h-1.5 rounded-full bg-surface-variant"></div>
+</div>
+<!-- Close Action -->
+<div class="px-margin flex justify-end -mt-2">
+<button aria-label="Tutup dialog" class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-ink-muted active:scale-95 transition-transform" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Scrollable Sheet Content -->
+<div class="px-margin pb-6 pt-1 flex flex-col gap-space-lg overflow-y-auto">
+<!-- Modal Header -->
+<div class="flex flex-col items-center text-center">
+<!-- 3D Glossy Shield Icon Badge -->
+<div class="relative w-16 h-16 rounded-full bg-pink-subtle flex items-center justify-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.9),0_8px_20px_rgba(240,100,140,0.25)] mb-3">
+<div class="absolute inset-1 rounded-full bg-gradient-to-tr from-pink-wash to-pink-tint opacity-80"></div>
+<span class="material-symbols-outlined text-pink-primary-strong text-[32px] relative z-10" style="font-variation-settings: 'FILL' 1;">
+              enhanced_encryption
+            </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-[#22222B] tracking-tight">
+            Unduh Salinan Data Saya
+          </h2>
+<p class="font-body-md text-body-md text-ink-muted mt-1 max-w-[320px]">
+            Semua riwayat siklus, gejala, dan catatan pribadimu akan diekspor dalam arsip terenkripsi end-to-end.
+          </p>
+</div>
+<!-- Section 1: Pilihan Format Ekspor -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface">Pilihan Format Arsip</span>
+<!-- Option 1: Selected (PDF Terlindungi) -->
+<div class="p-space-md rounded-DEFAULT bg-pink-wash shadow-[0_4px_16px_rgba(240,100,140,0.12)] cursor-pointer flex items-start gap-space-md transition-all active:scale-[0.99] relative overflow-hidden" id="optionPdf" onclick="selectExportFormat('pdf')">
+<div class="w-1.5 absolute left-0 inset-y-0 bg-pink-primary-strong rounded-r"></div>
+<div class="w-10 h-10 rounded-full bg-pink-subtle flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-pink-primary-strong text-[22px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-[#22222B]">Ringkasan Laporan</span>
+<span class="font-label-xs text-label-xs bg-pink-tint text-pink-primary-text px-2 py-0.5 rounded-full">PDF</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-muted mt-1 leading-snug">
+                Format mudah dibaca untuk konsultasi dokter, terlindungi password dokumen resmi.
+              </p>
+</div>
+<div class="pt-1 shrink-0">
+<div class="w-6 h-6 rounded-full bg-phase-period flex items-center justify-center text-on-primary shadow-sm" id="radioIndicatorPdf">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+</div>
+<!-- Option 2: JSON AES-256 -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low cursor-pointer flex items-start gap-space-md transition-all active:scale-[0.99] relative overflow-hidden" id="optionJson" onclick="selectExportFormat('json')">
+<div class="w-1.5 absolute left-0 inset-y-0 bg-transparent rounded-r" id="optionJsonBar"></div>
+<div class="w-10 h-10 rounded-full bg-lavender-subtle flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">data_object</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-[#22222B]">Data Mentah Lengkap</span>
+<span class="font-label-xs text-label-xs bg-secondary-fixed text-secondary px-2 py-0.5 rounded-full">JSON AES-256</span>
+</div>
+<p class="font-body-sm text-body-sm text-ink-muted mt-1 leading-snug">
+                Format data terstruktur untuk pencadangan mandiri atau migrasi ke aplikasi lain.
+              </p>
+</div>
+<div class="pt-1 shrink-0">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent" id="radioIndicatorJson">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Rentang Waktu Data -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Rentang Waktu Data</label>
+<div class="flex items-center gap-2 overflow-x-auto pb-1">
+<button class="time-range-pill px-4 py-2 rounded-full font-label-sm text-label-sm bg-pink-primary-strong text-white shadow-[0_4px_12px_rgba(210,56,106,0.25)] shrink-0 transition-transform active:scale-95" onclick="selectTimeRange(this, 'all')" type="button">
+              Semua Riwayat (Aktif)
+            </button>
+<button class="time-range-pill px-4 py-2 rounded-full font-label-sm text-label-sm bg-surface-container text-ink-muted shrink-0 transition-transform active:scale-95" onclick="selectTimeRange(this, '1y')" type="button">
+              1 Tahun Terakhir
+            </button>
+<button class="time-range-pill px-4 py-2 rounded-full font-label-sm text-label-sm bg-surface-container text-ink-muted shrink-0 transition-transform active:scale-95" onclick="selectTimeRange(this, '6m')" type="button">
+              6 Bulan Terakhir
+            </button>
+</div>
+</div>
+<!-- Section 3: Perlindungan Kata Sandi & Kunci Enkripsi -->
+<div class="rounded-DEFAULT bg-pink-wash p-4 flex flex-col gap-3 shadow-[inset_0_1px_2px_rgba(255,255,255,0.8)]">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-[#22222B]" for="exportPasswordInput">
+              Kata Sandi Enkripsi Berkas
+            </label>
+<span class="font-label-xs text-label-xs text-pink-primary-strong bg-pink-tint px-2 py-0.5 rounded-full">
+              Wajib
+            </span>
+</div>
+<!-- Password Input Box -->
+<div class="relative flex items-center">
+<div class="absolute left-3 flex items-center pointer-events-none text-pink-primary-strong">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<input class="w-full h-12 bg-surface-container-lowest rounded-full pl-10 pr-11 font-body-md text-body-md text-on-surface shadow-[0_2px_8px_rgba(240,100,140,0.08)] focus:outline-none focus:ring-2 focus:ring-pink-primary-strong transition-all" id="exportPasswordInput" placeholder="Minimal 8 karakter..." type="password" value="LunaraKunci2025#"/>
+<button aria-label="Tampilkan sandi" class="absolute right-3 w-8 h-8 rounded-full flex items-center justify-center text-ink-muted hover:text-on-surface active:scale-90 transition-transform" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="passwordEyeIcon">visibility</span>
+</button>
+</div>
+<!-- Helper Microcopy -->
+<div class="flex items-start gap-2 pt-0.5">
+<span class="material-symbols-outlined text-pink-primary-strong text-[18px] shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-ink-muted leading-tight">
+              Kunci enkripsi dibuat langsung di perangkatmu. Lunara tidak pernah menyimpan salinan kata sandi ini di peladen.
+            </p>
+</div>
+</div>
+<!-- Section 4: Catatan Keamanan & Hak Pengguna -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Berkas otomatis terhapus dari memori sementara setelah diunduh.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Hanya dapat dibuka dengan kata sandi yang kamu tentukan.</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-2.5 pt-2">
+<button class="w-full h-[52px] rounded-full bg-pink-primary-strong text-white font-label-md text-label-md flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(210,56,106,0.30)] active:scale-[0.97] transition-all" id="downloadSubmitBtn" onclick="handleStartDownload(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+<span>Buat &amp; Unduh Berkas Terenkripsi</span>
+</button>
+<button class="w-full h-11 rounded-full text-ink-muted font-body-md text-body-md flex items-center justify-center hover:text-on-surface active:scale-[0.98] transition-colors" id="cancelBtn" onclick="handleCloseModal()" type="button">
+            Batalkan
+          </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function selectExportFormat(format) {
+      const optionPdf = document.getElementById('optionPdf');
+      const optionJson = document.getElementById('optionJson');
+      const radioPdf = document.getElementById('radioIndicatorPdf');
+      const radioJson = document.getElementById('radioIndicatorJson');
+      const jsonBar = document.getElementById('optionJsonBar');
+
+      if (format === 'pdf') {
+        optionPdf.className = "p-space-md rounded-DEFAULT bg-pink-wash shadow-[0_4px_16px_rgba(240,100,140,0.12)] cursor-pointer flex items-start gap-space-md transition-all active:scale-[0.99] relative overflow-hidden";
+        optionJson.className = "p-space-md rounded-DEFAULT bg-surface-container-low cursor-pointer flex items-start gap-space-md transition-all active:scale-[0.99] relative overflow-hidden";
+        
+        radioPdf.className = "w-6 h-6 rounded-full bg-phase-period flex items-center justify-center text-on-primary shadow-sm";
+        radioJson.className = "w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent";
+        jsonBar.className = "w-1.5 absolute left-0 inset-y-0 bg-transparent rounded-r";
+      } else {
+        optionJson.className = "p-space-md rounded-DEFAULT bg-pink-wash shadow-[0_4px_16px_rgba(240,100,140,0.12)] cursor-pointer flex items-start gap-space-md transition-all active:scale-[0.99] relative overflow-hidden";
+        optionPdf.className = "p-space-md rounded-DEFAULT bg-surface-container-low cursor-pointer flex items-start gap-space-md transition-all active:scale-[0.99] relative overflow-hidden";
+        
+        radioJson.className = "w-6 h-6 rounded-full bg-phase-period flex items-center justify-center text-on-primary shadow-sm";
+        radioPdf.className = "w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent";
+        jsonBar.className = "w-1.5 absolute left-0 inset-y-0 bg-secondary rounded-r";
+      }
+    }
+
+    function selectTimeRange(btnElement, range) {
+      const pills = document.querySelectorAll('.time-range-pill');
+      pills.forEach(pill => {
+        pill.className = "time-range-pill px-4 py-2 rounded-full font-label-sm text-label-sm bg-surface-container text-ink-muted shrink-0 transition-transform active:scale-95";
+      });
+      btnElement.className = "time-range-pill px-4 py-2 rounded-full font-label-sm text-label-sm bg-pink-primary-strong text-white shadow-[0_4px_12px_rgba(210,56,106,0.25)] shrink-0 transition-transform active:scale-95";
+    }
+
+    function togglePasswordVisibility() {
+      const input = document.getElementById('exportPasswordInput');
+      const icon = document.getElementById('passwordEyeIcon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.textContent = 'visibility';
+      }
+    }
+
+    function handleStartDownload(button) {
+      const originalContent = button.innerHTML;
+      button.disabled = true;
+      button.innerHTML = `
+        <span class="material-symbols-outlined animate-spin text-[20px]">sync</span>
+        <span>Mengenkripsi Data...</span>
+      `;
+      setTimeout(() => {
+        button.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span>Berkas Siap Diunduh</span>
+        `;
+        button.classList.replace('bg-pink-primary-strong', 'bg-status-success');
+        setTimeout(() => {
+          handleCloseModal();
+        }, 1200);
+      }, 1600);
+    }
+
+    function handleCloseModal() {
+      const modal = document.getElementById('exportModalRoot');
+      const backdrop = document.getElementById('backdropOverlay');
+      if (modal) {
+        modal.style.transition = 'opacity 0.25s ease';
+        modal.style.opacity = '0';
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 250);
+      }
+    }
+
+    document.getElementById('closeModalBtn')?.addEventListener('click', handleCloseModal);
+    document.getElementById('backdropOverlay')?.addEventListener('click', handleCloseModal);
+  </script>
+</div></main></body></html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catat Siklus &amp; Gejala - Lunara</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lunara: {
+              canvas: '#FFFAFC',
+              faint: '#FFE4EC',
+              primary: '#D2386A',
+              primaryDark: '#B22051',
+              primaryText: '#C92A5E',
+              lavender: '#9C8CF0',
+              lavenderLight: '#ECE9FF',
+              peach: '#FFB88A',
+              peachLight: '#FFF0E6',
+              mint: '#4EBA96',
+              mintLight: '#E8F7F2',
+              ink: '#22222B',
+              inkMuted: '#6B6876',
+              clayBorder: '#F5E6EC'
+            }
+          },
+          boxShadow: {
+            'clay-card': '0 10px 30px -4px rgba(210, 56, 106, 0.12), 0 4px 12px 0 rgba(0, 0, 0, 0.03), inset 0 2px 4px rgba(255, 255, 255, 0.95)',
+            'clay-button': '0 8px 24px -4px rgba(210, 56, 106, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.35)',
+            'clay-active': '0 4px 14px 0 rgba(210, 56, 106, 0.22), inset 0 2px 3px rgba(255, 255, 255, 0.8)',
+            'clay-inner': 'inset 0 2px 5px rgba(0, 0, 0, 0.04), inset 0 -2px 4px rgba(255, 255, 255, 0.8)',
+            'pill-soft': '0 2px 6px rgba(0,0,0,0.03), inset 0 1px 1px #FFFFFF'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Font: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Core Layout Styles -->
+<style data-purpose="custom-claymorphism">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Smooth custom scrollbar for mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    .clay-surface {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF9FB 100%);
+    }
+
+    .clay-pill-active {
+      background: linear-gradient(135deg, #FFF0F4 0%, #FFE3EC 100%);
+      border: 1.5px solid #D2386A;
+      box-shadow: 0 4px 12px rgba(210, 56, 106, 0.15), inset 0 1px 2px #FFFFFF;
+    }
+
+    .clay-pill-inactive {
+      background: #FFFFFF;
+      border: 1px solid #F1E5EB;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02), inset 0 1px 2px #FFFFFF;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 flex justify-center items-center min-h-screen p-0 sm:p-4 text-lunara-ink antialiased select-none">
+<!-- BEGIN: MobileContainer -->
+<!-- iPhone 390px x 844px Mobile Viewport Container -->
+<div class="relative w-[390px] h-[844px] overflow-hidden rounded-[44px] bg-[#2E2836]/60 backdrop-blur-md shadow-2xl flex flex-col border-[8px] border-slate-800">
+<!-- Dimmed Background Sheet Context (Mimicking underlying Lunara Home) -->
+<div class="absolute inset-0 bg-[#FFF7FA] opacity-40 blur-[2px] pointer-events-none p-6">
+<div class="w-full h-12 flex justify-between items-center mb-6">
+<div class="w-24 h-6 rounded-full bg-lunara-faint"></div>
+<div class="w-8 h-8 rounded-full bg-lunara-faint"></div>
+</div>
+<div class="w-full h-44 rounded-3xl bg-white shadow-sm mb-4"></div>
+<div class="w-full h-32 rounded-3xl bg-white shadow-sm"></div>
+</div>
+<!-- BEGIN: BottomSheetModal -->
+<main class="relative mt-8 z-10 flex-1 flex flex-col bg-lunara-canvas rounded-t-[36px] border-t border-white/80 shadow-2xl overflow-hidden" data-purpose="bottom-sheet-modal">
+<!-- BEGIN: ModalHeader -->
+<header class="pt-3 pb-2 px-6 flex-shrink-0 bg-lunara-canvas border-b border-lunara-clayBorder/60">
+<!-- Top Drag Pill Indicator -->
+<div class="w-12 h-1.5 rounded-full bg-slate-300 mx-auto mb-3"></div>
+<!-- Title & Close Action -->
+<div class="flex items-center justify-between">
+<div class="w-7"></div> <!-- Spacer for balance -->
+<h1 class="text-[17px] font-bold text-lunara-ink tracking-tight text-center">
+            Catat Siklus &amp; Gejala
+          </h1>
+<button aria-label="Tutup modal" class="w-7 h-7 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 transition-colors" type="button">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Date & Cycle Phase Context Chip -->
+<div class="flex justify-center mt-2.5 mb-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-lunara-faint/80 border border-lunara-primaryText/20 text-xs font-semibold text-lunara-primaryText transition-transform active:scale-95" type="button">
+<svg class="w-3.5 h-3.5 text-lunara-primaryText" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Senin, 14 Okt 2024</span>
+<span class="w-1 h-1 rounded-full bg-lunara-primaryText"></span>
+<span class="text-[11px] font-medium text-lunara-primaryDark">Hari ke-14 • Masa Subur</span>
+</button>
+</div>
+</header>
+<!-- END: ModalHeader -->
+<!-- BEGIN: ScrollableFormContent -->
+<section class="flex-1 overflow-y-auto px-5 py-4 space-y-6 no-scrollbar pb-28">
+<!-- SECTION 1: Aliran Darah Haid -->
+<article class="space-y-3" data-purpose="period-flow-tracker">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-lunara-ink flex items-center gap-1.5">
+<span>Aliran Darah Haid</span>
+<span class="text-xs font-normal text-lunara-inkMuted">(Opsional)</span>
+</h2>
+<span class="text-[11px] font-semibold text-lunara-primaryText bg-lunara-faint px-2 py-0.5 rounded-full">
+              Tidak Ada
+            </span>
+</div>
+<!-- Flow Pills Horizontal Selector -->
+<div class="grid grid-cols-5 gap-2">
+<!-- Item 1: Tidak Ada (Selected) -->
+<button class="clay-pill-active py-2.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all" type="button">
+<div class="w-6 h-6 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full border-2 border-slate-300"></span>
+</div>
+<span class="text-[10px] font-bold text-lunara-primaryText text-center leading-tight">Tidak</span>
+</button>
+<!-- Item 2: Bercak / Flek -->
+<button class="clay-pill-inactive py-2.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95" type="button">
+<div class="w-6 h-6 rounded-full bg-pink-50 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-[#E57399]"></span>
+</div>
+<span class="text-[10px] font-semibold text-lunara-inkMuted text-center leading-tight">Bercak</span>
+</button>
+<!-- Item 3: Ringan -->
+<button class="clay-pill-inactive py-2.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95" type="button">
+<div class="w-6 h-6 rounded-full bg-pink-100 flex items-center justify-center">
+<svg class="w-3.5 h-3.5 text-lunara-primary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-semibold text-lunara-inkMuted text-center leading-tight">Ringan</span>
+</button>
+<!-- Item 4: Sedang -->
+<button class="clay-pill-inactive py-2.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95" type="button">
+<div class="w-6 h-6 rounded-full bg-pink-100 flex items-center justify-center">
+<div class="flex -space-x-1">
+<svg class="w-3 h-3 text-lunara-primary" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+<svg class="w-3 h-3 text-lunara-primary" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+</div>
+</div>
+<span class="text-[10px] font-semibold text-lunara-inkMuted text-center leading-tight">Sedang</span>
+</button>
+<!-- Item 5: Deras -->
+<button class="clay-pill-inactive py-2.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95" type="button">
+<div class="w-6 h-6 rounded-full bg-pink-100 flex items-center justify-center">
+<div class="flex -space-x-1.5">
+<svg class="w-3 h-3 text-lunara-primaryDark" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+<svg class="w-3.5 h-3.5 text-lunara-primaryDark" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+</div>
+</div>
+<span class="text-[10px] font-semibold text-lunara-inkMuted text-center leading-tight">Deras</span>
+</button>
+</div>
+</article>
+<!-- SECTION 2: Kondisi Fisik & Gejala Tubuh -->
+<article class="space-y-3" data-purpose="symptoms-selector">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-lunara-ink">Kondisi Fisik &amp; Gejala Tubuh</h2>
+<span class="text-[11px] text-lunara-inkMuted font-medium">Pilih yang dirasakan</span>
+</div>
+<!-- Multi-select Chip Grid -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Kram Perut (Active) -->
+<button class="clay-pill-active h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-white shadow-sm flex items-center justify-center text-sm">
+                ⚡
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-bold text-lunara-primaryDark truncate">Kram Perut</p>
+<p class="text-[10px] text-lunara-primaryText font-medium">Ringan</p>
+</div>
+<svg class="w-4 h-4 text-lunara-primary flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+</button>
+<!-- Keputihan Bening (Active - Typical Fertile) -->
+<button class="clay-pill-active h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-white shadow-sm flex items-center justify-center text-sm">
+                💧
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-bold text-lunara-primaryDark truncate">Cairan Bening</p>
+<p class="text-[10px] text-lunara-primaryText font-medium">Khas Ovulasi</p>
+</div>
+<svg class="w-4 h-4 text-lunara-primary flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+</button>
+<!-- Payudara Sensitif (Active) -->
+<button class="clay-pill-active h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-white shadow-sm flex items-center justify-center text-sm">
+                🌸
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-bold text-lunara-primaryDark truncate">Payudara Sensitif</p>
+<p class="text-[10px] text-lunara-primaryText font-medium">Sensitif</p>
+</div>
+<svg class="w-4 h-4 text-lunara-primary flex-shrink-0" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+</button>
+<!-- Sakit Kepala (Inactive) -->
+<button class="clay-pill-inactive h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-slate-50 flex items-center justify-center text-sm">
+                🤕
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-semibold text-lunara-ink truncate">Sakit Kepala</p>
+<p class="text-[10px] text-lunara-inkMuted font-normal">Tidak terasa</p>
+</div>
+</button>
+<!-- Kembung (Inactive) -->
+<button class="clay-pill-inactive h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-slate-50 flex items-center justify-center text-sm">
+                🎈
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-semibold text-lunara-ink truncate">Kembung</p>
+<p class="text-[10px] text-lunara-inkMuted font-normal">Normal</p>
+</div>
+</button>
+<!-- Lelah / Lemas (Inactive) -->
+<button class="clay-pill-inactive h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-slate-50 flex items-center justify-center text-sm">
+                💤
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-semibold text-lunara-ink truncate">Lelah / Lemas</p>
+<p class="text-[10px] text-lunara-inkMuted font-normal">Biasa saja</p>
+</div>
+</button>
+<!-- Nyeri Punggung (Inactive) -->
+<button class="clay-pill-inactive h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-slate-50 flex items-center justify-center text-sm">
+                🧘
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-semibold text-lunara-ink truncate">Nyeri Punggung</p>
+<p class="text-[10px] text-lunara-inkMuted font-normal">Tidak ada</p>
+</div>
+</button>
+<!-- Jerawat (Inactive) -->
+<button class="clay-pill-inactive h-12 px-3 rounded-2xl flex items-center gap-2.5 text-left transition-transform active:scale-[0.98]" type="button">
+<span class="w-7 h-7 rounded-xl bg-slate-50 flex items-center justify-center text-sm">
+                ✨
+              </span>
+<div class="flex-1 min-w-0 leading-tight">
+<p class="text-xs font-semibold text-lunara-ink truncate">Kulit Bersih</p>
+<p class="text-[10px] text-lunara-inkMuted font-normal">Tidak berjerawat</p>
+</div>
+</button>
+</div>
+</article>
+<!-- SECTION 3: Mood & Perasaan -->
+<article class="space-y-3" data-purpose="mood-tracker">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-lunara-ink">Mood &amp; Perasaan</h2>
+<span class="text-[11px] font-semibold text-lunara-primaryText bg-lunara-faint px-2 py-0.5 rounded-full">
+              Bahagia &amp; Berenergi
+            </span>
+</div>
+<!-- Mood Expression Row -->
+<div class="flex items-center justify-between gap-1.5 p-2 rounded-2xl bg-white border border-lunara-clayBorder/70 shadow-sm">
+<!-- Mood 1: Bahagia (Selected) -->
+<button class="flex-1 flex flex-col items-center py-2 px-1 rounded-xl bg-pink-100/70 border border-lunara-primary/30 transition-all scale-105 shadow-sm" type="button">
+<span class="text-2xl mb-1 filter drop-shadow">✨</span>
+<span class="text-[10px] font-bold text-lunara-primaryDark leading-tight text-center">Bahagia</span>
+</button>
+<!-- Mood 2: Tenang -->
+<button class="flex-1 flex flex-col items-center py-2 px-1 rounded-xl hover:bg-slate-50 transition-all text-lunara-inkMuted" type="button">
+<span class="text-2xl mb-1 opacity-80">🌸</span>
+<span class="text-[10px] font-medium leading-tight text-center">Tenang</span>
+</button>
+<!-- Mood 3: Sensitif -->
+<button class="flex-1 flex flex-col items-center py-2 px-1 rounded-xl hover:bg-slate-50 transition-all text-lunara-inkMuted" type="button">
+<span class="text-2xl mb-1 opacity-80">🥺</span>
+<span class="text-[10px] font-medium leading-tight text-center">Sensitif</span>
+</button>
+<!-- Mood 4: Gelisah -->
+<button class="flex-1 flex flex-col items-center py-2 px-1 rounded-xl hover:bg-slate-50 transition-all text-lunara-inkMuted" type="button">
+<span class="text-2xl mb-1 opacity-80">💭</span>
+<span class="text-[10px] font-medium leading-tight text-center">Cemas</span>
+</button>
+<!-- Mood 5: Bad Mood -->
+<button class="flex-1 flex flex-col items-center py-2 px-1 rounded-xl hover:bg-slate-50 transition-all text-lunara-inkMuted" type="button">
+<span class="text-2xl mb-1 opacity-80">🌧️</span>
+<span class="text-[10px] font-medium leading-tight text-center">Lelah</span>
+</button>
+</div>
+</article>
+<!-- SECTION 4: Gairah Seksual & Intimasi -->
+<article class="space-y-3" data-purpose="intimacy-tracker">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-lunara-ink">Aktivitas &amp; Hasrat Seksual</h2>
+<span class="text-[11px] text-lunara-inkMuted font-medium">Privat &amp; Enkripsi</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<!-- Option 1: Tinggi (Active) -->
+<button class="clay-pill-active px-3.5 py-2 rounded-xl text-xs font-bold text-lunara-primaryDark flex items-center gap-1.5 transition-all" type="button">
+<span>🔥</span>
+<span>Gairah Tinggi</span>
+</button>
+<!-- Option 2: Sedang -->
+<button class="clay-pill-inactive px-3.5 py-2 rounded-xl text-xs font-semibold text-lunara-ink flex items-center gap-1.5 transition-all active:scale-95" type="button">
+<span>🌱</span>
+<span>Sedang</span>
+</button>
+<!-- Option 3: Rendah -->
+<button class="clay-pill-inactive px-3.5 py-2 rounded-xl text-xs font-semibold text-lunara-ink flex items-center gap-1.5 transition-all active:scale-95" type="button">
+<span>💤</span>
+<span>Rendah</span>
+</button>
+<!-- Option 4: Terlindungi (Active chip) -->
+<button class="clay-pill-active px-3.5 py-2 rounded-xl text-xs font-bold text-lunara-primaryDark flex items-center gap-1.5 transition-all" type="button">
+<span>🛡️</span>
+<span>Terlindungi</span>
+</button>
+</div>
+</article>
+<!-- SECTION 5: Catatan Pribadi -->
+<article class="space-y-2" data-purpose="private-notes">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-lunara-ink flex items-center gap-1.5">
+<span>Catatan Pribadi</span>
+<svg class="w-3.5 h-3.5 text-lunara-inkMuted" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</h2>
+<span class="text-[11px] text-slate-400 font-medium">0 / 250</span>
+</div>
+<!-- Clay Textarea Container -->
+<div class="relative rounded-2xl bg-white border border-lunara-clayBorder shadow-inner p-3">
+<textarea class="w-full text-xs text-lunara-ink placeholder:text-slate-400 border-none p-0 focus:ring-0 focus:outline-none resize-none bg-transparent leading-relaxed" placeholder="Tulis catatan, asupan gizi, atau rasa tubuhmu hari ini... (hanya dapat dibaca olehmu)" rows="3"></textarea>
+<div class="flex items-center justify-between pt-1 border-t border-slate-50 mt-1">
+<span class="text-[10px] text-emerald-600 font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Tersimpan terenkripsi aman
+              </span>
+<button class="text-slate-400 hover:text-lunara-primary text-xs" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- END: ScrollableFormContent -->
+<!-- BEGIN: BottomFixedActionBar -->
+<footer class="absolute bottom-0 left-0 right-0 px-6 pt-3 pb-7 bg-gradient-to-t from-lunara-canvas via-lunara-canvas/95 to-transparent backdrop-blur-sm border-t border-lunara-clayBorder/40 flex flex-col items-center gap-2" data-purpose="fixed-bottom-cta">
+<!-- Primary CTA Button -->
+<button class="w-full h-[52px] bg-lunara-primary hover:bg-lunara-primaryDark active:scale-[0.98] transition-all rounded-full text-white font-bold text-sm tracking-wide shadow-clay-button flex items-center justify-center gap-2" type="button">
+<svg class="w-4 h-4 text-white stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Simpan Catatan</span>
+</button>
+<!-- Secondary Dismiss Link -->
+<button class="text-xs font-semibold text-lunara-inkMuted hover:text-lunara-ink py-0.5 active:opacity-70 transition-opacity" type="button">
+          Batalkan Perubahan
+        </button>
+</footer>
+<!-- END: BottomFixedActionBar -->
+</main>
+<!-- END: BottomSheetModal -->
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-900/30 rounded-full z-20 pointer-events-none"></div>
+</div>
+<!-- END: MobileContainer -->
+</body></html>

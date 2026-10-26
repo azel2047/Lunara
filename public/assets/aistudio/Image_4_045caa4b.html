@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#ffffff", "border-pink": "#FBD3DF", "surface": "#fcf8ff", "on-primary-fixed-variant": "#8a1240", "surface-variant": "#e4e1ed", "on-tertiary-fixed-variant": "#6b3a17", "secondary-fixed-dim": "#c9beff", "on-secondary-container": "#3c2a89", "secondary": "#6050af", "on-primary-container": "#5f0028", "primary-container": "#f0648c", "surface-bright": "#fcf8ff", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#feb789", "canvas-off-white": "#FFFAFC", "on-primary-fixed": "#3f0018", "primary": "#aa2e57", "outline": "#8a7175", "phase-period": "#F0648C", "pink-tint": "#FFE4EC", "surface-tint": "#aa2e57", "status-error": "#C0392B", "on-secondary-fixed-variant": "#483795", "error-container": "#ffdad6", "primary-fixed-dim": "#ffb1c2", "on-tertiary-fixed": "#311300", "on-surface-variant": "#574145", "pink-primary-strong": "#D2386A", "on-error": "#ffffff", "inverse-primary": "#ffb1c2", "background": "#fcf8ff", "on-secondary-fixed": "#1b0062", "outline-variant": "#ddbfc4", "on-surface": "#1b1b24", "tertiary-container": "#c5865c", "peach-subtle": "#FFEBDD", "pink-wash": "#FFF1F5", "surface-container-high": "#e9e6f3", "primary-fixed": "#ffd9df", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "inverse-surface": "#303039", "secondary-container": "#a898fd", "tertiary": "#87512c", "status-success": "#2E9E6B", "surface-container-low": "#f5f2ff", "surface-dim": "#dbd8e5", "ink-muted": "#6E6E7A", "on-background": "#1b1b24", "status-warning": "#B7791F", "surface-container-highest": "#e4e1ed", "on-tertiary-container": "#4b2201", "pink-subtle": "#FFD6E2", "inverse-on-surface": "#f2effc", "phase-fertile": "#9C8CF0", "on-secondary": "#ffffff", "pink-primary-text": "#C92A5E", "phase-pms": "#FFB88A", "on-primary": "#ffffff", "error": "#ba1a1a", "tertiary-fixed": "#ffdcc7", "surface-container": "#efecf9", "lavender-subtle": "#E9E5FD" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "gutter": "1rem", "space-xl": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "1.25rem" }, "fontFamily": { "display": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-xs": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "display": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "21px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-xs": ["11px", {"lineHeight": "14px", "fontWeight": "600"}], "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}], "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-canvas-off-white text-on-surface font-body-md min-h-screen flex flex-col relative selection:bg-pink-subtle selection:text-pink-primary-strong"><div class="fixed top-0 inset-x-0 h-72 bg-gradient-to-b from-pink-tint/80 via-pink-wash/50 to-transparent pointer-events-none z-0"></div><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-canvas-off-white/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(240,100,140,0.06)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-pink-subtle flex items-center justify-center text-pink-primary-strong shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]"><span class="material-symbols-outlined text-[20px]">water_drop</span></div><div class="flex flex-col"><span class="font-label-xs text-ink-muted leading-tight tracking-wider uppercase">Lunara Care</span><span class="font-headline-sm text-pink-primary-strong leading-tight">Kalender</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Privasi Cepat" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-pink-primary-strong transition-transform active:scale-95"><span class="material-symbols-outlined text-[22px]">shield</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(240,100,140,0.2)] ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7SN0UEcT1MKkh3JaGhlE83eiDLiiwLty86FBLz__2dHFh4GJY1VWm3v_2uCmvDFF_uPVB_-PHqaGikmmGjQn2z8LGN9sqq7VFi1XkTH2Lpsa9xOxnWX80r9obprnLXlHgCHqyoaZt9NFMkKcStbWtpH3S_12tm6IdrYq8LduTbVkdJA_jDeffBDeqrouMrdaLTFwZncoEKCM1RNCublR_-iN7y-qQr-C0_xUFHNncaSrQWNHk2JFQ"/></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-16 pb-28 bg-transparent z-10"><div class="flex flex-col w-full gap-space-lg">
+<!-- Month & View Switcher Bar -->
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest shadow-md shadow-pink-primary-strong/5 rounded-full px-space-sm py-1">
+<button aria-label="Bulan sebelumnya" class="w-8 h-8 rounded-full flex items-center justify-center text-ink-muted hover:text-pink-primary-strong transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-1.5 px-space-xs">
+<span class="material-symbols-outlined text-[18px] text-pink-primary-strong">event</span>
+<span class="font-headline-sm text-on-surface">Oktober 2024</span>
+</div>
+<button aria-label="Bulan berikutnya" class="w-8 h-8 rounded-full flex items-center justify-center text-ink-muted hover:text-pink-primary-strong transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- Toggle Segment -->
+<div class="flex items-center p-1 bg-pink-wash rounded-full shadow-[inset_0_1px_2px_rgba(240,100,140,0.08)]">
+<button class="px-3 py-1 rounded-full bg-surface-container-lowest font-label-xs text-pink-primary-text shadow-sm shadow-pink-primary-strong/10 transition-all">
+        Bulan
+      </button>
+<button class="px-3 py-1 rounded-full font-label-xs text-ink-muted transition-all active:scale-95">
+        Minggu
+      </button>
+</div>
+</div>
+<!-- Primary Clay Feature: 28-Dot Cycle Matrix -->
+<section class="relative w-full bg-surface-container-lowest rounded-lg p-space-md shadow-[0_8px_24px_rgba(240,100,140,0.15)] shadow-pink-primary-strong/10">
+<!-- Top specular inner highlight effect overlay -->
+<div class="absolute inset-x-0 top-0 h-10 rounded-t-lg bg-gradient-to-b from-white/90 to-transparent pointer-events-none"></div>
+<div class="relative flex flex-col gap-space-md">
+<!-- Card Header -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-phase-fertile"></span>
+<span class="font-label-xs text-ink-muted uppercase tracking-wider">Siklus Saat Ini (28 Hari)</span>
+</div>
+<h2 class="font-headline-md text-on-surface mt-0.5">Hari ke-14 <span class="font-body-md text-pink-primary-text">• Estimasi Ovulasi</span></h2>
+</div>
+<div class="px-2.5 py-1 rounded-full bg-lavender-subtle flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">spa</span>
+<span class="font-label-xs text-secondary font-semibold">Subur Puncak</span>
+</div>
+</div>
+<!-- 28 Dot Flow Visualizer (4 rows of 7 dots) -->
+<div class="bg-pink-wash/50 rounded-DEFAULT p-3.5 flex flex-col gap-2.5">
+<div class="grid grid-cols-7 gap-y-2.5 place-items-center">
+<!-- Days 1-5: Menstruation (Pink Cerah) -->
+<div class="relative flex flex-col items-center group">
+<div class="w-6 h-6 rounded-full bg-phase-period flex items-center justify-center shadow-sm">
+<span class="font-label-xs text-on-primary">1</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center group">
+<div class="w-6 h-6 rounded-full bg-phase-period flex items-center justify-center shadow-sm">
+<span class="font-label-xs text-on-primary">2</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center group">
+<div class="w-6 h-6 rounded-full bg-phase-period flex items-center justify-center shadow-sm">
+<span class="font-label-xs text-on-primary">3</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center group">
+<div class="w-6 h-6 rounded-full bg-phase-period flex items-center justify-center shadow-sm">
+<span class="font-label-xs text-on-primary">4</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center group">
+<div class="w-6 h-6 rounded-full bg-phase-period flex items-center justify-center shadow-sm">
+<span class="font-label-xs text-on-primary">5</span>
+</div>
+</div>
+<!-- Days 6-11: Follicular (Pink-subtle / Soft Rose) -->
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-pink-subtle flex items-center justify-center">
+<span class="font-label-xs text-pink-primary-text">6</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-pink-subtle flex items-center justify-center">
+<span class="font-label-xs text-pink-primary-text">7</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-pink-subtle flex items-center justify-center">
+<span class="font-label-xs text-pink-primary-text">8</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-pink-subtle flex items-center justify-center">
+<span class="font-label-xs text-pink-primary-text">9</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-pink-subtle flex items-center justify-center">
+<span class="font-label-xs text-pink-primary-text">10</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-pink-subtle flex items-center justify-center">
+<span class="font-label-xs text-pink-primary-text">11</span>
+</div>
+</div>
+<!-- Days 12-16: Fertile & Ovulation (Lavender) -->
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-phase-fertile/60 flex items-center justify-center">
+<span class="font-label-xs text-on-primary">12</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-phase-fertile/70 flex items-center justify-center">
+<span class="font-label-xs text-on-primary">13</span>
+</div>
+</div>
+<!-- Day 14: Hari Ini / Ovulation Hero Dot with Pulsing Glow Ring -->
+<div class="relative flex items-center justify-center">
+<span class="absolute w-8 h-8 rounded-full bg-secondary-container/40 animate-ping"></span>
+<div class="relative w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-md shadow-secondary/40 ring-2 ring-white">
+<span class="font-label-xs font-bold text-[10px]">14</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-phase-fertile/70 flex items-center justify-center">
+<span class="font-label-xs text-on-primary">15</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-phase-fertile/60 flex items-center justify-center">
+<span class="font-label-xs text-on-primary">16</span>
+</div>
+</div>
+<!-- Days 17-28: Luteal / PMS (Warm Peach) -->
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-phase-pms/70 flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">17</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">18</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">19</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">20</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">21</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">22</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">23</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">24</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">25</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">26</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">27</span>
+</div>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-peach-subtle flex items-center justify-center">
+<span class="font-label-xs text-on-tertiary-container">28</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Compact Legend -->
+<div class="grid grid-cols-4 gap-1 pt-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-phase-period shrink-0"></span>
+<span class="font-label-xs text-ink-muted truncate">Haid</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-pink-subtle shrink-0"></span>
+<span class="font-label-xs text-ink-muted truncate">Folikuler</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-phase-fertile shrink-0"></span>
+<span class="font-label-xs text-ink-muted truncate">Masa Subur</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-phase-pms shrink-0"></span>
+<span class="font-label-xs text-ink-muted truncate">Luteal/PMS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Monthly Calendar Section -->
+<section class="flex flex-col w-full bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm shadow-pink-primary-strong/5">
+<!-- Day Header -->
+<div class="grid grid-cols-7 mb-2 text-center">
+<span class="font-label-xs text-ink-muted">Min</span>
+<span class="font-label-xs text-ink-muted">Sen</span>
+<span class="font-label-xs text-ink-muted">Sel</span>
+<span class="font-label-xs text-ink-muted">Rab</span>
+<span class="font-label-xs text-ink-muted">Kam</span>
+<span class="font-label-xs text-ink-muted">Jum</span>
+<span class="font-label-xs text-ink-muted">Sab</span>
+</div>
+<!-- Calendar Date Grid (October 2024: starts Tuesday 1st) -->
+<div class="grid grid-cols-7 gap-y-1.5 place-items-center">
+<!-- Empty slots for Sun, Mon -->
+<div class="w-9 h-11"></div>
+<div class="w-9 h-11"></div>
+<!-- 1 Oct (Day 1 - Haid) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-text">1</span>
+<span class="w-1.5 h-1.5 rounded-full bg-phase-period"></span>
+</button>
+<!-- 2 Oct (Day 2 - Haid) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-text">2</span>
+<span class="w-1.5 h-1.5 rounded-full bg-phase-period"></span>
+</button>
+<!-- 3 Oct (Day 3 - Haid) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-text">3</span>
+<span class="w-1.5 h-1.5 rounded-full bg-phase-period"></span>
+</button>
+<!-- 4 Oct (Day 4 - Haid) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-text">4</span>
+<span class="w-1.5 h-1.5 rounded-full bg-phase-period"></span>
+</button>
+<!-- 5 Oct (Day 5 - Haid) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-text">5</span>
+<span class="w-1.5 h-1.5 rounded-full bg-phase-period"></span>
+</button>
+<!-- 6-10 Oct (Follicular Phase) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-wash/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-surface">6</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-wash/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-surface">7</span>
+<span class="w-1 h-1 rounded-full bg-pink-primary-strong"></span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-wash/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-surface">8</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-wash/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-surface">9</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-wash/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-surface">10</span>
+</button>
+<!-- 11 Oct (Follicular) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-wash/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-surface">11</span>
+</button>
+<!-- 12-13 Oct (Fertile Window) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-lavender-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-secondary">12</span>
+<span class="w-1 h-1 rounded-full bg-phase-fertile"></span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-lavender-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-secondary">13</span>
+<span class="w-1 h-1 rounded-full bg-phase-fertile"></span>
+</button>
+<!-- 14 Oct: TODAY / OVULATION ESTIMATE (Hero Active Day) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-primary-strong text-on-primary flex flex-col items-center justify-center gap-0.5 shadow-md shadow-pink-primary-strong/30 active:scale-95 transition-transform">
+<span class="font-label-sm font-bold">14</span>
+<span class="material-symbols-outlined text-[10px] text-pink-subtle" style="font-variation-settings: 'FILL' 1;">spa</span>
+</button>
+<!-- 15-16 Oct (Fertile Window) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-lavender-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-secondary">15</span>
+<span class="w-1 h-1 rounded-full bg-phase-fertile"></span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-lavender-subtle flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-secondary">16</span>
+</button>
+<!-- 17-27 Oct (Luteal / PMS Phase) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">17</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">18</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">19</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">20</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">21</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">22</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">23</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">24</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">25</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">26</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-peach-subtle/80 flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-on-tertiary-container">27</span>
+</button>
+<!-- 28-31 Oct (Estimasi Haid Berikutnya) -->
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-tint flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-strong font-semibold">28</span>
+<span class="material-symbols-outlined text-[10px] text-phase-period">water_drop</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-tint flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-strong font-semibold">29</span>
+<span class="material-symbols-outlined text-[10px] text-phase-period">water_drop</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-tint flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-strong font-semibold">30</span>
+<span class="material-symbols-outlined text-[10px] text-phase-period">water_drop</span>
+</button>
+<button class="w-9 h-11 rounded-DEFAULT bg-pink-tint flex flex-col items-center justify-center gap-0.5 active:scale-95 transition-transform">
+<span class="font-label-sm text-pink-primary-strong font-semibold">31</span>
+<span class="material-symbols-outlined text-[10px] text-phase-period">water_drop</span>
+</button>
+<!-- Blank padding cells for next month -->
+<div class="w-9 h-11 opacity-30 flex items-center justify-center text-ink-muted font-label-sm">1</div>
+<div class="w-9 h-11 opacity-30 flex items-center justify-center text-ink-muted font-label-sm">2</div>
+</div>
+</section>
+<!-- Cycle Predictions & Care Insight Card -->
+<section class="flex flex-col gap-space-sm">
+<div class="relative w-full bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm shadow-pink-primary-strong/5 overflow-hidden">
+<!-- 4px category indicator strip on left edge -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-pink-primary-strong rounded-r"></div>
+<div class="flex items-center justify-between mb-3 pl-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-pink-primary-strong">auto_awesome</span>
+<span class="font-headline-sm text-on-surface">Prediksi Siklus Berikutnya</span>
+</div>
+<span class="font-label-xs text-ink-muted bg-pink-wash px-2 py-0.5 rounded-full">Estimasi</span>
+</div>
+<!-- Quick Metrics Row -->
+<div class="grid grid-cols-3 gap-2 pl-1 mb-space-sm">
+<div class="flex flex-col p-2.5 rounded-DEFAULT bg-pink-wash">
+<span class="font-label-xs text-ink-muted">Haid Berikutnya</span>
+<span class="font-label-sm text-pink-primary-strong mt-0.5">28 Okt</span>
+<span class="font-label-xs text-ink-muted text-[10px]">14 hari lagi</span>
+</div>
+<div class="flex flex-col p-2.5 rounded-DEFAULT bg-pink-wash">
+<span class="font-label-xs text-ink-muted">Rata-rata Siklus</span>
+<span class="font-label-sm text-on-surface mt-0.5">28 Hari</span>
+<span class="font-label-xs text-status-success text-[10px]">Teratur</span>
+</div>
+<div class="flex flex-col p-2.5 rounded-DEFAULT bg-pink-wash">
+<span class="font-label-xs text-ink-muted">Durasi Haid</span>
+<span class="font-label-sm text-on-surface mt-0.5">5 Hari</span>
+<span class="font-label-xs text-ink-muted text-[10px]">Normal</span>
+</div>
+</div>
+<!-- Soft Care Prompt -->
+<div class="flex items-start gap-2.5 p-3 rounded-DEFAULT bg-lavender-subtle/70 pl-3">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs font-semibold text-secondary">Fase Ovulasi &amp; Subur</span>
+<p class="font-body-sm text-on-surface-variant mt-0.5 leading-snug">
+            Energi fisik berada pada titik puncak! Waktu yang hangat untuk aktivitas luar ruangan, sosialisasi, dan menjaga hidrasi harian.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating / Primary Bottom Action Button -->
+<div class="w-full pt-space-xs">
+<button class="w-full h-[52px] rounded-full bg-pink-primary-strong text-on-primary font-label-md flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(240,100,140,0.25)] hover:bg-pink-primary-strong/95 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Catat Siklus &amp; Gejala</span>
+</button>
+</div>
+</div></main><div class="fixed bottom-4 inset-x-0 z-50 px-margin flex justify-center pb-safe pointer-events-none"><nav class="pointer-events-auto w-full max-w-[358px] h-[72px] bg-surface-container-lowest/95 backdrop-blur-xl rounded-full px-space-xs py-space-xs flex items-center justify-around shadow-[0_4px_24px_rgba(240,100,140,0.18),inset_0_1px_1px_rgba(255,255,255,0.95)]" data-active-classes="text-pink-primary-strong font-label-md"><a class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 text-ink-muted transition-all active:scale-95" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-xs">Beranda</span></a><a aria-current="page" class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95 text-pink-primary-strong font-label-md" data-path="kalender" href="#"><span class="material-symbols-outlined text-[24px]">calendar_month</span><span class="font-label-xs">Kalender</span></a><a class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 text-ink-muted transition-all active:scale-95" data-path="wawasan" href="#"><span class="material-symbols-outlined text-[24px]">insights</span><span class="font-label-xs">Wawasan</span></a><a class="flex-1 h-full rounded-full flex flex-col items-center justify-center gap-0.5 text-ink-muted transition-all active:scale-95" data-path="profil" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-xs">Profil</span></a></nav></div></body></html>

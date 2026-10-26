@@ -1,0 +1,6 @@
+{
+  "name": "Lunara",
+  "description": "Pelacak siklus haid, fase ovulasi, dan wawasan kesehatan reproduksi dengan asisten cerdas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
